@@ -6,7 +6,8 @@ Lua SDK files for AppWarp and Corona application samples.
 **Prerequisites**
 
 * Follow [these steps](http://appwarp.shephertz.com/game-development-center/Using-AppHQ/) and get your key pair and a room id.
-* Copy the AppWarp folder from the latest version and put it in the Sample's folder that you want to run.
+* Copy the AppWarp folder from the latest version and put it in the Sample's folder that you want to run
+* Edit main.lua and replace the keys and roomid where indicated with the values you got from AppHq dashboard
 * Load the Sample in Corona Simulator
 
 Following samples are provided
