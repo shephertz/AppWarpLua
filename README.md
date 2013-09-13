@@ -14,6 +14,8 @@ Following samples are provided
 
 **Chat**
 
+![AppWarp Corona Chat](https://dl.dropboxusercontent.com/u/61084350/Chat.png)
+
 * This illustrates simple chat room operations. 
 * Users connect and join with a random name generate from os.clock()
 * We then join the room created from AppHq console and subscribe to it
@@ -21,6 +23,8 @@ Following samples are provided
 * Using Corona native keyboard samples, developers can allow users to type in messages. This is not included in this sample.
 
 **ColorMove**
+
+![AppWarp Corona Move](https://dl.dropboxusercontent.com/u/61084350/ColorMove.png)
 
 * This illustrates moving of vectors in real time. Users can drag vectors to update their locations on other users screens.
 * Users connect and join with a random name generate from os.clock()
