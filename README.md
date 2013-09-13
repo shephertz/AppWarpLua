@@ -3,7 +3,12 @@ AppWarpLua
 
 Lua SDK files for AppWarp and Corona application samples.
 
-**Prerequisites**
+[**Lua Getting Started**](https://github.com/shephertz/AppWarpDeveloper/wiki/Lua-Getting-Started)
+
+[**Lua API Reference**](https://github.com/shephertz/AppWarpDeveloper/wiki/Lua-API-Reference)
+
+
+**Prerequisites for running the samples**
 
 * Follow [these steps](http://appwarp.shephertz.com/game-development-center/Using-AppHQ/) and get your key pair and a room id.
 * Copy the AppWarp folder from the latest version and put it in the Sample's folder that you want to run
