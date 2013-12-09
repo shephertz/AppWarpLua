@@ -1,0 +1,1 @@
+* Bug fixes for device connection issues (keep alive message bug)
