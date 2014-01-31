@@ -42,6 +42,7 @@ end
     for k,v in pairs(payLoadTable) do
       n = n+1      
       MatchingRooms[n]=v
+	  MatchingRooms[n].id = k
     end        
     return MatchingRooms
  end 
