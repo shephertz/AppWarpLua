@@ -1,0 +1,1 @@
+Getter/Setter method added to WarpClient to change apiKey, privateKey and UDP added
