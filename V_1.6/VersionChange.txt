@@ -1,0 +1,1 @@
+* Improved connection error detection by processing server keep-alives. 
