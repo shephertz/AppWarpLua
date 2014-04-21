@@ -48,15 +48,15 @@
  local function handleAuthResponse(resultCode, payLoadTable)
     if(resultCode == WarpResponseResultCode.SUCCESS) then -- Success
       WarpConfig.session_id = tonumber(payLoadTable['sessionid']);
+      _connectionState = WarpConnectionState.CONNECTED;
       if(_connectionState == WarpConnectionState.RECOVERING) then
         fireConnectionEvent(WarpResponseResultCode.SUCCESS_RECOVERED);
       else
         fireConnectionEvent(WarpResponseResultCode.SUCCESS);  
-      end
-      _connectionState = WarpConnectionState.CONNECTED;
+      end      
     else
-      fireConnectionEvent(resultCode)    
       _connectionState = WarpConnectionState.DISCONNECTED;
+      fireConnectionEvent(resultCode)          
       Channel.socket_close()
     end   
   end
