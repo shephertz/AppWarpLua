@@ -105,7 +105,11 @@
     elseif((notifyType == WarpNotifyTypeCode.ROOM_PROPERTY_CHANGE) and (NotificationListenerTable.onUserChangedRoomProperty ~= nil)) then
       NotificationListenerTable.onUserChangedRoomProperty(payLoadTable['sender'], payLoadTable['id'], JSON:decode(payLoadTable['properties']), JSON:decode(payLoadTable['lockProperties'])) 
     elseif((notifyType == WarpNotifyTypeCode.NEXT_TURN_REQUESTED) and (NotificationListenerTable.onNextTurnRequest ~= nil)) then
-      NotificationListenerTable.onNextTurnRequest(payLoadTable['lastTurn'])      	  	  
+      NotificationListenerTable.onNextTurnRequest(payLoadTable['lastTurn'])      	  
+    elseif((notifyType == WarpNotifyTypeCode.USER_PAUSED) and (NotificationListenerTable.onUserPaused ~= nil)) then
+      NotificationListenerTable.onUserPaused(payLoadTable['id'], payLoadTable['isLobby'], payLoadTable['user'])
+    elseif ((notifyType == WarpNotifyTypeCode.USER_RESUMED) and (NotificationListenerTable.OnUserResumed ~= nil)) then
+      NotificationListenerTable.OnUserResumed(payLoadTable['id'], payLoadTable['isLobby'], payLoadTable['user'])	  
     end           
  end
  
@@ -377,7 +381,6 @@
  end
    
    function WarpClient.onConnect(success)
-     
      if(not(success)) then
        if(UDPListener~=nil) then
         UDPListener.socket_close() 
@@ -397,7 +400,7 @@
          RequestListenerTable.onDisconnectDone(WarpResponseResultCode.SUCCESS)
        end
      elseif(_connectionState ~= WarpConnectionState.DISCONNECTED) then
-       if(WarpConfig.recoveryAllowance > 0 and WarpConfig.session_id ~= 0) then
+       if(tonumber(WarpConfig.recoveryAllowance) > 0 and tonumber(WarpConfig.session_id) ~= 0) then
          _connectionState = WarpConnectionState.DISCONNECTED; 
          fireConnectionEvent(WarpResponseResultCode.CONNECTION_ERROR_RECOVERABLE, 0)  
        else
@@ -420,7 +423,6 @@
    end
      
    function WarpClient.Loop()   
-
      if( not(LookupDone) and not(LookupChannel.isConnected) and (_connectionState == WarpConnectionState.CONNECTING)) then
        LookupChannel.socket_connect()
      end
