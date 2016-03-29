@@ -1,0 +1,17 @@
+
+Version 1.10.2  …
+============
+* JoinAndSubcribeRoom added
+* LeaveAndUnsucribeRoom added
+* GetRoomInRangeWithProp added
+* getUserStatus added
+* getOnlineUsersCount added
+* getAllRoomsCount added
+
+VERSION 1.10
+============
+* OnUserPaused and OnUserResumed notification listeners added
+
+VERSION 1.10
+============
+* New Turn Based Room APIs added
