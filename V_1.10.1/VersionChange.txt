@@ -1,7 +1,0 @@
-VERSION 1.10
-============
-* OnUserPaused and OnUserResumed notification listeners added
-
-VERSION 1.10
-============
-* New Turn Based Room APIs added

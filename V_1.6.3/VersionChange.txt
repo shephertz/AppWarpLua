@@ -1,3 +1,0 @@
-* reasonCode added in onConnectDone
-* getSessionID api added
-* recoverConnectionWithSessionID api added

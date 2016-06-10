@@ -1,3 +1,0 @@
-VERSION 1.10
-============
-* New Turn Based Room APIs added

@@ -1,2 +1,0 @@
-* Added APIs to reset listeners
-* Bug fixes
