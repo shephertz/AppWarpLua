@@ -482,6 +482,7 @@
    function incrementKeepAlives()
        countPendingKeepAlives = countPendingKeepAlives + 1;
        if(countPendingKeepAlives > WarpConfig.pendingKeepAliveIntervalsLimit) then
+          Channel.socket_close()
           WarpClient.onConnect(false);
        end
        --warplog(countPendingKeepAlives);

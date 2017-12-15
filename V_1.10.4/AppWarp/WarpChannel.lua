@@ -26,6 +26,7 @@ function WarpChannel.socket_connect()
 end
       
 function WarpChannel.socket_close()
+  WarpChannel.isConnected = false;    
   client_socket:close();
 end
 
